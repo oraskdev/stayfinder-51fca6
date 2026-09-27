@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Templates – Booking Like</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar">
+<div class="nav-container">
+<a href="index.html" class="logo">Booking Like</a>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="book-now.html">Book Now</a>
+<a href="emails.html">Emails</a>
+</div>
+</div>
+</nav>
+<main>
+<section class="page-hero">
+<h1>Email Templates</h1>
+<p>Automated email sequences for booking confirmations, reminders, and payment recovery.</p>
+</section>
+<section class="email-templates">
+<div class="template-container">
+<div class="template-card">
+<h3>Payment Failed – First Attempt</h3>
+<div class="template-meta">
+<span class="timing">Sent immediately after failed charge</span>
+<span class="tone">Tone: Helpful, non-alarming</span>
+</div>
+<div class="template-preview">
+<div class="email-subject">Subject: Quick action needed – Payment issue with your booking</div>
+<div class="email-body">
+<p>Hi [Customer Name],</p>
+<p>We tried to process your payment for <strong>[Service Name]</strong> scheduled for <strong>[Date]</strong>, but the charge didn't go through.</p>
+<p>This happens occasionally due to expired cards, insufficient funds, or bank security holds.</p>
+<p><strong>Your booking is still reserved for the next 48 hours.</strong></p>
+<p><a href="[Update Payment Link]" class="email-cta">Update Payment Method</a></p>
+<p>If you have questions, reply to this email or call us at [Phone].</p>
+<p>— The Booking Like Team</p>
+</div>
+</div>
+</div>
+<div class="template-card">
+<h3>Payment Failed – Second Attempt</h3>
+<div class="template-meta">
+<span class="timing">Sent 24 hours after first email</span>
+<span class="tone">Tone: Urgent, still helpful</span>
+</div>
+<div class="template-preview">
+<div class="email-subject">Subject: [Action Required] Update payment to keep your booking</div>
+<div class="email-body">
+<p>Hi [Customer Name],</p>
+<p>We still haven't been able to process payment for your <strong>[Service Name]</strong> appointment on <strong>[Date]</strong>.</p>
+<p><strong>Your reservation will be automatically cancelled in 24 hours</strong> unless we receive payment.</p>
+<p><a href="[Update Payment Link]" class="email-cta">Secure Your Booking Now</a></p>
+<p>Need help? We're here:</p>
+<ul>
+<li>Reply to this email</li>
+<li>Call [Phone]</li>
+<li>Log in to your account to update payment details</li>
+</ul>
+<p>— The Booking Like Team</p>
+</div>
+</div>
+</div>
+<div class="template-card">
+<h3>Payment Failed – Final Notice</h3>
+<div class="template-meta">
+<span class="timing">Sent 4 hours before cancellation</span>
+<span class="tone">Tone: Last chance, clear consequence</span>
+</div>
+<div class="template-preview">
+<div class="email-subject">Subject: Final reminder – Booking cancels in 4 hours</div>
+<div class="email-body">
+<p>Hi [Customer Name],</p>
+<p><strong>This is your final reminder.</strong></p>
+<p>Your <strong>[Service Name]</strong> booking for <strong>[Date]</strong> will be cancelled in <strong>4 hours</strong> due to payment issues.</p>
+<p><a href="[Update Payment Link]" class="email-cta">Update Payment Now</a></p>
+<p>Once cancelled, this time slot may be booked by another customer.</p>
+<p>Questions? Contact us immediately at [Phone].</p>
+<p>— The Booking Like Team</p>
+</div>
+</div>
+</div>
+<div class="template-card">
+<h3>Payment Recovered – Confirmation</h3>
+<div class="template-meta">
+<span class="timing">Sent immediately after successful retry</span>
+<span class="tone">Tone: Positive, reassuring</span>
+</div>
+<div class="template-preview">
+<div class="email-subject">Subject: Payment successful – Your booking is confirmed</div>
+<div class="email-body">
+<p>Hi [Customer Name],</p>
+<p><strong>Good news!</strong> We've successfully processed your payment.</p>
+<p>Your <strong>[Service Name]</strong> appointment on <strong>[Date]</strong> at <strong>[Time]</strong> is confirmed.</p>
+<p><strong>Booking Details:</strong></p>
+<ul>
+<li>Service: [Service Name]</li>
+<li>Date: [Date]</li>
+<li>Time: [Time]</li>
+<li>Amount Paid: [Price]</li>
+</ul>
+<p><a href="[Booking Link]" class="email-cta">View Booking Details</a></p>
+<p>We'll send you a reminder 24 hours before your appointment.</p>
+<p>— The Booking Like Team</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="implementation-notes">
+<div class="notes-container">
+<h2>Implementation Guidelines</h2>
+<div class="note-card">
+<h4>Retry Schedule</h4>
+<ul>
+<li>Immediate retry after initial failure</li>
+<li>Second retry 12 hours later</li>
+<li>Third retry 24 hours later</li>
+<li>Final retry 36 hours later</li>
+<li>Cancel booking at 48 hours if all retries fail</li>
+</ul>
+</div>
+<div class="note-card">
+<h4>Payment Recovery Best Practices</h4>
+<ul>
+<li>Use one-click payment update links with pre-filled customer data</li>
+<li>Support multiple payment methods (card update, PayPal, bank transfer)</li>
+<li>Log all retry attempts and email opens for follow-up</li>
+<li>Provide phone support option in every email</li>
+<li>Never shame or blame the customer</li>
+</ul>
+</div>
+<div class="note-card">
+<h4>Legal & Compliance</h4>
+<ul>
+<li>Clearly state cancellation timeline and consequences</li>
+<li>Include opt-out for transactional emails (where legally required)</li>
+<li>Store payment retry history for dispute resolution</li>
+<li>Comply with PCI-DSS: never include full card numbers in emails</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="footer-content">
+<div class="footer-brand">
+<div class="logo">Booking Like</div>
+<p>Professional booking, simplified.</p>
+</div>
+<div class="footer-links">
+<div class="footer-col">
+<h4>Platform</h4>
+<a href="services.html">Services</a>
+<a href="book-now.html">Book Now</a>
+<a href="emails.html">Emails</a>
+</div>
+<div class="footer-col">
+<h4>Support</h4>
+<a href="#">Help Center</a>
+<a href="#">Contact</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2025 Booking Like. All rights reserved.</p>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
